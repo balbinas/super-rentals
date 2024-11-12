@@ -31,13 +31,13 @@ module('Integration | Component | share-button', function (hooks) {
     await render(hbs`<ShareButton>Tweet this!</ShareButton>`);
 
     assert
-    .dom('a')
-    .hasAttribute('target', '_blank')
-    .hasAttribute('rel', 'external nofollow noopener noreferrer')
-    .hasAttribute('href', /^https:\/\/twitter\.com\/intent\/tweet/)
-    .hasClass('share')
-    .hasClass('button')
-    .containsText('Tweet this!');
+      .dom('a')
+      .hasAttribute('target', '_blank')
+      .hasAttribute('rel', 'external nofollow noopener noreferrer')
+      .hasAttribute('href', /^https:\/\/twitter\.com\/intent\/tweet/)
+      .hasClass('share')
+      .hasClass('button')
+      .containsText('Tweet this!');
 
     assert.strictEqual(this.tweetParam('url'), MOCK_URL.href);
   });
