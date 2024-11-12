@@ -39,7 +39,7 @@ module('Integration | Component | rental/detailed', function (hooks) {
     assert.dom('.jumbo a.button').containsText('Share on Twitter');
   });
 
-    test('it renders detailed information about a rental property', async function (assert) {
+  test('it renders detailed information about a rental property', async function (assert) {
     await render(hbs`<Rental::Detailed @rental={{this.rental}} />`);
 
     assert.dom('article').hasClass('rental');
